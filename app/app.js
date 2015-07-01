@@ -7,12 +7,12 @@ var app = angular.module('dvbp', [
 ]);
 app.config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/', {
-        templateUrl: 'main-page/main-page.html'
+        templateUrl: 'app/main-page/main-page.html'
     }).when('/where', {
-        templateUrl: 'where-page/where-page.html',
+        templateUrl: 'app/where-page/where-page.html',
         controller: 'WhereCtrl'
     }).when('/about', {
-        templateUrl: 'about-page/about-page.html'
+        templateUrl: 'app/about-page/about-page.html'
     }).otherwise(
         {redirectTo: '/'}
     );

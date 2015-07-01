@@ -11,8 +11,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
-  <link rel="stylesheet" href="../style/css/main.css">
-  <link rel="stylesheet" href="../style/app.css">
+  <link rel="stylesheet" href="style/css/main.css">
+  <link rel="stylesheet" href="style/app.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
 <body>
@@ -25,9 +25,9 @@
       <a href="#where">Where?</a>
       <a href="#about">About</a>
       <div class="controls" ng-controller="AudioCtrl">
-        <img src="../style/buttons/play-button-sq.png" class="img-circle" ng-show="paused" ng-click="play()"/>
-        <img src="../style/buttons/pause-button-sq.png" class="img-circle" ng-hide="paused" ng-click="pause()"/>
-        <img src="../style/buttons/next-button-sq.png" class="img-circle" ng-click="next()"/>
+        <img src="style/buttons/play-button-sq.png" class="img-circle" ng-show="paused" ng-click="play()"/>
+        <img src="style/buttons/pause-button-sq.png" class="img-circle" ng-hide="paused" ng-click="pause()"/>
+        <img src="style/buttons/next-button-sq.png" class="img-circle" ng-click="next()"/>
       </div>
     </nav>
   </header>
@@ -40,10 +40,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular-route.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular-sanitize.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <script src="app.js"></script>
-  <script src="main-page/main-page-controllers.js"></script>
-  <script src="main-page/main-page-directives.js"></script>
-  <script src="where-page/where-page-controllers.js"></script>
+  <script src="app/app.js"></script>
+  <script src="app/main-page/main-page-controllers.js"></script>
+  <script src="app/main-page/main-page-directives.js"></script>
+  <script src="app/where-page/where-page-controllers.js"></script>
   <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.0/lodash.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-google-maps/2.1.5/angular-google-maps.min.js"></script>
