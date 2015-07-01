@@ -71,4 +71,10 @@ app.controller('AudioCtrl', ['$scope', '$sce', function($scope, $sce) {
     } else{
         $scope.paused = true;
     }
+    if(!_isNotMobile) {
+        var answer = confirm("Turn on the music?");
+        if(answer) {
+            $scope.play();
+        }
+    }
 }]);
