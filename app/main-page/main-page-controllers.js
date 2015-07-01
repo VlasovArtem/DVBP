@@ -40,7 +40,10 @@ app.controller('AudioCtrl', ['$scope', '$sce', function($scope, $sce) {
             name: "Rudimental - Never Let You Go"
         },
         {
-            url: "http://cs6-4v4.vk-cdn.net/p12/2bfd4ebc7feb2a.mp3?extra=IHNxqhzd9BSLv1NZ8ua19TAM_0c3exX3UahFqz6ltuiEAITUaHYZd1uECoW9lt_FTGuYTJe9GuHbaYpvn6kSbG7mBOqI",
+            url: {
+                high: "http://cs6-4v4.vk-cdn.net/p12/2bfd4ebc7feb2a.mp3?extra=IHNxqhzd9BSLv1NZ8ua19TAM_0c3exX3UahFqz6ltuiEAITUaHYZd1uECoW9lt_FTGuYTJe9GuHbaYpvn6kSbG7mBOqI",
+                low: "http://cs6-4v4.vk-cdn.net/p12/2bfd4ebc7feb2a.mp3?extra=IHNxqhzd9BSLv1NZ8ua19TAM_0c3exX3UahFqz6ltuiEAITUaHYZd1uECoW9lt_FTGuYTJe9GuHbaYpvn6kSbG7mBOqI"
+            },
             name: "GRADES - King"
         },
         {
@@ -70,6 +73,7 @@ app.controller('AudioCtrl', ['$scope', '$sce', function($scope, $sce) {
     };
     var songNumber = random();
     audio.src = chooseQuality(songs[songNumber].url);
+    $scope.currentSongName = songs[songNumber].name;
     $scope.next = function() {
         if(songNumber == 5) {
             songNumber = 0;
@@ -80,6 +84,7 @@ app.controller('AudioCtrl', ['$scope', '$sce', function($scope, $sce) {
             $scope.next();
         }
         audio.src = chooseQuality(songs[songNumber].url);
+        $scope.currentSongName = songs[songNumber].name;
         audio.play();
         $scope.paused = false;
     };
