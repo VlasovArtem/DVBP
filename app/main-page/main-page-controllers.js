@@ -44,10 +44,11 @@ app.controller('AudioCtrl', ['$scope', '$sce', function($scope, $sce) {
         if(songNumber == 5) {
             songNumber = 0;
         } else {
-            songNumber++;
+            ++songNumber;
         }
         $scope.song = songs[songNumber];
         audio.src = $scope.song.url;
+        audio.play();
         $scope.paused = false;
     };
     $scope.paused = false;
@@ -55,6 +56,7 @@ app.controller('AudioCtrl', ['$scope', '$sce', function($scope, $sce) {
         audio.play();
         $scope.paused = false;
     };
+    $scope.play();
     $scope.pause = function() {
         audio.pause();
         $scope.paused = true;
