@@ -20,43 +20,43 @@ app.controller('AudioCtrl', ['$scope', '$sce', function($scope, $sce) {
     var songs = [
         {
             url: {
-                high: "http://cs6-7v4.vk-cdn.net/p21/667d7cca5642fa.mp3?extra=MlBrHquA5sxr5ry56xjcS_y88Afd3PV4UsWm6TeeDzpEN_WnXVwu2S0IlVZFoZJvA4g-9ALvoTB0JCYrz2if6QjUeQVClJhgRg",
-                low: "http://cs6-2v4.vk-cdn.net/p14/1fe1fe73fb8511.mp3?extra=glIoDdDzsn8fUDjeg5X4F6ZPRP7ajcae5nmFeEjy-LmG-HDGQ3v5WYl04eTl0OfKWbbGDqfghpBueGSh2Y77NhC-fLFtBg"
+                high: "https://drive.google.com/uc?export=download&id=0BzInm4pFi1J9NzdUZl9fbzFzaFU",
+                low: "https://drive.google.com/uc?export=download&id=0BzInm4pFi1J9bFYzamFCYlltUjA"
             },
             name: "Skrillex and Diplo - Where Are Ü Now"
         },
         {
             url: {
-                high: "http://cs6-8v4.vk-cdn.net/p6/1ac414e02bfd05.mp3?extra=dWKz50jXieTe-CkvRJP5pXH1PniM3nZsDw0ycTNzO1bJLQXM_2KPx_0pBYBwNpMyjQdaV0iel0xIeoisjuGpkNoxT2efaDO5",
-                low: "http://cs6-10v4.vk-cdn.net/p24/0e0cd602f9222b.mp3?extra=UHAWeHqifHbDqsmztoxJWoZlC3JXOXdxDGA6WV5zGqW17UGBJjIs_YoJRPqAq5jLQCoGDsQTXGcZnDUnAmLo8oKAFnpE-g"
+                high: "https://drive.google.com/uc?export=download&id=0BzInm4pFi1J9QlBTdE9qbktfQVk",
+                low: "https://drive.google.com/uc?export=download&id=0BzInm4pFi1J9UEw2Nk5kOUZWdkk"
             },
             name: "Tinie Tempah - Not Letting Go"
         },
         {
             url: {
-                high: "http://cs6-2v4.vk-cdn.net/p12/2001ba759b8f31.mp3?extra=6oK0YhzXCi2h16ZO_U7jlBQQjjYdKviqI3xsVcWRGcQg88TdXbWPoHUWS0QYQkjfnseV2ZgcQ52OBzaBpIgeLRFIz-_S0y5mEg",
-                low: "http://cs6-2v4.vk-cdn.net/p12/2001ba759b8f31.mp3?extra=6oK0YhzXCi2h16ZO_U7jlBQQjjYdKviqI3xsVcWRGcQg88TdXbWPoHcXQ0QYQkjfnseV2ZgcQ52OBzaBpN1Kf0MbmrjT1nI8Ew"
+                high: "https://drive.google.com/uc?export=download&id=0BzInm4pFi1J9Si1VS09JMTNMZkE",
+                low: "https://drive.google.com/uc?export=download&id=0BzInm4pFi1J9VW9OcWJkWHZzOTg"
             },
             name: "Rudimental - Never Let You Go"
         },
         {
             url: {
-                high: "http://cs6-4v4.vk-cdn.net/p12/2bfd4ebc7feb2a.mp3?extra=IHNxqhzd9BSLv1NZ8ua19TAM_0c3exX3UahFqz6ltuiEAITUaHYZd1uECoW9lt_FTGuYTJe9GuHbaYpvn6kSbG7mBOqI",
-                low: "http://cs6-4v4.vk-cdn.net/p12/2bfd4ebc7feb2a.mp3?extra=IHNxqhzd9BSLv1NZ8ua19TAM_0c3exX3UahFqz6ltuiEAITUaHYZd1uECoW9lt_FTGuYTJe9GuHbaYpvn6kSbG7mBOqI"
+                high: "https://drive.google.com/uc?export=download&id=0BzInm4pFi1J9N3BwLWZncklpLXM",
+                low: "https://drive.google.com/uc?export=download&id=0BzInm4pFi1J9N3BwLWZncklpLXM"
             },
             name: "GRADES - King"
         },
         {
             url: {
-                high: "http://cs6-9v4.vk-cdn.net/p2/50d59a1c5bf45e.mp3?extra=5W7XmQ5QLa-zF_9yeOdRHSzM7WRzlwnelMSbncYZolWCFKuCgsnKupwwa2R7qe1EjmJ6MS_Jb7ocImutt6xN0uu2Vmj2dxb2",
-                low: "http://cs6-12v4.vk-cdn.net/p8/84f129699f7089.mp3?extra=oV-pICac1iPP-4uvW3aBWx8u2UVzyMt6PZ9plXp-g6IIt-UkfSx2tWCQjqCnsrjMDSLYFZsVnQdXFlxcr7G2h39NrwvrwJ4"
+                high: "https://drive.google.com/uc?export=download&id=0BzInm4pFi1J9dTBCa1BNTndyNk0",
+                low: "https://drive.google.com/uc?export=download&id=0BzInm4pFi1J9WHE1dG5ZZHd6Ulk"
             },
             name: "Blonde - All Cried Out"
         },
         {
             url: {
-                high: "http://cs6-9v4.vk-cdn.net/p4/571e6623b77f91.mp3?extra=3NBX6jrdvLGJjdgzajC1h6NVTg6dyoG3F9GTAx32g4VrVEFN2j-ckC8Xz8fNAeCh_8W0zSrU1yFL89A_pBTdgoM0uirKfMmv",
-                low: "http://cs6-7v4.vk-cdn.net/p14/01ec9ac9aa4773.mp3?extra=mL5si2h-mnvrklUW56JLc7i9mSY_QXdKPbVKqLIwd-SuYhhV2P8G8-oVRL3gXVJdwVKRiSMmv4sBk9oH4tsSCsFJrOdFmDGf"
+                high: "https://drive.google.com/uc?export=download&id=0BzInm4pFi1J9dlFOR3IzQURuN1E",
+                low: "https://drive.google.com/uc?export=download&id=0BzInm4pFi1J9V3Q2R21YU3l6Zzg"
             },
             name: "Major Lazer & DJ Snake - Lean On"
         }

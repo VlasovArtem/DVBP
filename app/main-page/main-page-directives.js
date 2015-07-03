@@ -30,18 +30,22 @@ app.directive('countdown', ['$timeout', function($timeout) {
                     "second": leftSeconds
                 };
             };
+            scope.party = ['P', 'a', 'r', 't', 'y'];
+            scope.begins = ['B', 'e', 'g', 'i', 'n', 's'];
+            scope.end = false;
             var countdown = function() {
                 updateDate();
                 updateCountdown();
                 if(futureUTCTime < currentUTCTime) {
                     scope.end = true;
+                    $timeout.cancel(countdownTimeout);
                 }
                 countdownTimeout = $timeout(countdown, secondMillis);
             };
             var countdownTimeout = $timeout(countdown, secondMillis);
         },
         template:
-            '<div class="count">' +
+            '<div class="count" ng-show="!end">' +
             '   <div>' +
             '       <span><i>Days</i></span>' +
             '   <div class="day">{{left.day}}</div>' +
@@ -60,6 +64,16 @@ app.directive('countdown', ['$timeout', function($timeout) {
             '       <span><i>Seconds</i></span>' +
             '       <div class="seconds">' +
             '           <span ng-if="left.second < 10">0</span>{{left.second}}</div>' +
+            '   </div>' +
+            '</div>' +
+            '<div ng-show="end" class="pb">' +
+            '   <div ng-repeat="letter in party">' +
+            '       <span ng-bind="letter" class="letter"></span>' +
+            '   </div>' +
+            '</div>' +
+            '<div ng-show="end" class="pb">' +
+            '   <div ng-repeat="letter in begins">' +
+            '       <span ng-bind="letter" class="letter"></span>' +
             '   </div>' +
             '</div>'
     }
