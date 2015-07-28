@@ -7,7 +7,7 @@ app.directive('countdown', ['$timeout', function($timeout) {
     return {
         restrict: 'E',
         link: function(scope, element, attrs) {
-            var bdate = new Date("Fri Jul 01 2015 18:30:00 GMT+0300");
+            var bdate = new Date("Fri Jul 01 2016 18:30:00 GMT+0300");
             var futureUTCTime = bdate.getTime();
             var currentUTCTime = new Date();
             var updateDate = function () {
